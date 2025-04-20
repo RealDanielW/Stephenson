@@ -1,100 +1,42 @@
 body {
-    background-color: #363c56;
     font-family: Arial, sans-serif;
+    background-color: #363c56;
+    color: #00a9e0;
 }
 
-.title-bar {
-    background-color: #242839;
-    text-align: center;
+.container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-.title-bar h1 {
-    color: #00a9e0;
-    font-size: 26px;
-    font-weight: bold;
-}
-
-.menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 280px;
-    height: 100%;
-    background-color: #2a2f45;
-    color: #00a9e0;
-    padding-top: 100px;
-}
-
-.menu-item {
+header {
+    background-color: #242839;
+    padding: 20px;
     text-align: center;
-    margin: 20px 0;
 }
 
-.menu-item img {
-    width: 40px;
-    height: 40px;
-}
-
-.menu-item span {
-    display: block;
-    font-size: 18px;
-}
-
-.tanks {
-    margin-left: 300px;
+.tank-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    gap: 20px;
+    justify-content: center;
 }
 
 .tank {
     background-color: #2a2f45;
     border-radius: 15px;
-    margin: 20px;
-    padding: 20px;
-    width: 350px;
+    padding: 15px;
+    width: 250px;
     text-align: center;
 }
 
-.tank img {
-    width: 180px;
-    height: 180px;
+.tank h2 {
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.details {
-    margin-top: 10px;
-}
-
-.detail {
-    margin-bottom: 10px;
-    color: #00a9e0;
-}
-
-.zoom-btn {
-    background-color: #242839;
-    color: #00a9e0;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-.zoom-btn:hover {
-    background-color: #575969;
-}
-
-.user-info {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: #00a9e0;
-    display: flex;
-    align-items: center;
-}
-
-.user-info img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+.tank p {
+    font-size: 16px;
 }
