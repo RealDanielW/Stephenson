@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephensons Tank Overview - (UTF)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='scripts.js') }}" defer></script>
+</head>
+<body>
+    <div class="title-bar">
+        <h1>Upper Tank Farm (UTF)</h1>
+    </div>
+    <div class="menu">
+        <div class="menu-item" id="upper-tank">
+            <img src="{{ url_for('static', filename='images/ArrowUp.png') }}" alt="Up Arrow">
+            <span>Upper Tank Farm</span>
+        </div>
+        <div class="menu-item" id="lower-tank">
+            <img src="{{ url_for('static', filename='images/ArrowDown.png') }}" alt="Down Arrow">
+            <span>Lower Tank Farm</span>
+        </div>
+        <div class="user-info">
+            <img src="{{ url_for('static', filename='images/UserPFP.png') }}" alt="User">
+            <span>FirstN LastN</span>
+        </div>
+    </div>
+    
+    <div class="tanks">
+        {% for tank in tank_data %}
+        <div class="tank" id="tank-{{ tank.id }}">
+            <h2>Storage Tank | {{ tank.id }}</h2>
+            <img src="{{ url_for('static', filename='images/StorageTank.png') }}" alt="Storage Tank">
+            <div class="details">
+                <div class="detail">
+                    <span>Temperature: {{ tank.temperature }}</span>
+                </div>
+                <div class="detail">
+                    <span>Weight: {{ tank.weight }}</span>
+                </div>
+            </div>
+            <button class="zoom-btn" onclick="zoomTank({{ tank.id }})">Zoom</button>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
