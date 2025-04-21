@@ -1,0 +1,7 @@
+/* styles.css */
+body {
+    background-color: #f0f0f0; /* Change this to any color */
+    background-image: url('your-image.jpg'); /* You can also add a background image */
+    background-size: cover; /* This makes the background image cover the whole screen */
+    background-position: center; /* This centers the background image */
+}
